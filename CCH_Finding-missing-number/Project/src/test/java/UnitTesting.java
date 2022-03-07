@@ -15,6 +15,11 @@ public class UnitTesting {
 		int output[] = sort.sort(arr);
 
 		assertArrayEquals(expect, output);
+		
+		int testArr[] = {1,2,3,8,9,10,13};
+		MyFilter filter = new MyFilter();
+		int outputCount = filter.getMissingNumberCount(testArr);
+		assertEquals(outputCount, 6);
 
 	}
 

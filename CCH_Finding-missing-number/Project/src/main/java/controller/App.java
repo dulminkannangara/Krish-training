@@ -32,8 +32,13 @@ public class App {
 		}
 		scn.close();
 
-		int missing_num = filter.getMissingNumber(sortArr);
 		System.out.println("\n~ ~ ~ Answer ~ ~ ~");
+		int missingNumCount = filter.getMissingNumberCount(sortArr);
+		if(missingNumCount>1){
+			System.out.println("There are more than one missing numbers. The missing number count is : "+ missingNumCount);
+			return;
+		}
+		int missing_num = filter.getMissingNumber(sortArr);
 		if (missing_num == sortArr[0] - 1) {
 			System.out.println(
 					"In this sequence, first or last number can be missing! \nIf missing number is First number -> First Missing Number is "
