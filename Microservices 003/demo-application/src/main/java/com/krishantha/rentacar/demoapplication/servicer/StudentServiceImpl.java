@@ -1,6 +1,7 @@
 package com.krishantha.rentacar.demoapplication.servicer;
 
 import com.krishantha.rentacar.demoapplication.model.Student;
+import com.krishantha.rentacar.demoapplication.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
