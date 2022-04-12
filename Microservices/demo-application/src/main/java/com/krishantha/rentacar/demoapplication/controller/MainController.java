@@ -3,10 +3,8 @@ package com.krishantha.rentacar.demoapplication.controller;
 import com.krishantha.rentacar.demoapplication.model.Student;
 import com.krishantha.rentacar.demoapplication.servicer.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MainController {
@@ -27,6 +25,16 @@ public class MainController {
     @RequestMapping(value = "/student",method = RequestMethod.POST)
     public Student sane(@RequestBody Student student){
         return studentService.save(student);
+    }
+
+    @RequestMapping(value = "/student",method = RequestMethod.GET)
+    public ResponseEntity<Student> fetchStudent(@RequestParam int id){
+        Student student = studentService.fetchStudentById(id);
+        if(student==null){
+            return ResponseEntity.notFound().build();
+        }else{
+            return ResponseEntity.ok().body(student);
+        }
     }
 
 }
