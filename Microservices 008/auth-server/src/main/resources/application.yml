@@ -1,0 +1,23 @@
+server:
+  port: 8282
+
+
+#spring:
+#  security:
+#    user:
+#      name: dulmin
+#      password: dulmin123
+#      roles: ADMIN,USER
+#security:
+#  oauth2:
+#    client:
+#      client-id: mobile
+#      client-secret: pin_password
+#      access-token-validity-seconds: 3600
+#      authorized-grant-types: refresh_token,authorization_code,password,client_credentials
+#      scope: READ,WRITE
+#    authorization:
+spring:
+  main:
+    allow-circular-references: true
+#      check-token-access: permitAll
