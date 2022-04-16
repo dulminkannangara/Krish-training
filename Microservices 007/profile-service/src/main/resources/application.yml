@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: profile
+#      http://localhost:8191/profile/service/
+#      (1) above url "profile" is put as name
+#      (2) above url "service" is put on "Active profiles:" in "Edit configuration". (in application, run)
+
